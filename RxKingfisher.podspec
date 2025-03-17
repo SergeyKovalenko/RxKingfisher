@@ -15,11 +15,11 @@ Pod::Spec.new do |s|
 
   s.swift_version = "5.3"
 
-  s.ios.deployment_target = "12.0"
-  s.tvos.deployment_target = "12.0"
-  s.osx.deployment_target = "10.14"
+  s.ios.deployment_target = "13.0"
+  s.tvos.deployment_target = "13.0"
+  s.osx.deployment_target = "10.15"
 
-  s.dependency 'Kingfisher', '~> 7'
+  s.dependency 'Kingfisher', '~> 8'
   s.dependency 'RxSwift', '~> 6'
   s.dependency 'RxCocoa', '~> 6'
 end

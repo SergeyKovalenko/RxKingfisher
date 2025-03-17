@@ -18,6 +18,7 @@ extension KingfisherWrapper {
             self.wrapper = base
         }
 
+        @MainActor
         public func image(placeholder: Placeholder? = nil,
                           options: KingfisherOptionsInfo? = nil) -> Binder<Resource?> {
             // `base.base` is the `Kingfisher` class' associated `ImageView`.
@@ -27,7 +28,8 @@ extension KingfisherWrapper {
                                       options: options)
             }
         }
-        
+
+        @MainActor
         public func setImage(with source: Source?,
                              placeholder: Placeholder? = nil,
                              options: KingfisherOptionsInfo? = nil) -> Single<KFCrossPlatformImage> {
@@ -49,7 +51,8 @@ extension KingfisherWrapper {
                 return Disposables.create { task?.cancel() }
             }
         }
-        
+
+        @MainActor
         public func setImage(with resource: Resource?,
                              placeholder: Placeholder? = nil,
                              options: KingfisherOptionsInfo? = nil) -> Single<KFCrossPlatformImage> {
